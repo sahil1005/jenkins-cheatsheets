@@ -1,0 +1,79 @@
+**Gcloud cmd**
+
+which gcloud
+
+gcloud version
+
+
+
+
+**install kubectl on GCP ubuntu instance** 
+
+snap install kubectl --classic
+
+kubectl version --client 
+
+
+
+
+**jenkins - installation**
+
+Installation of Jenkins on GCP Ubuntu instance
+
+apt update
+
+apt install openjdk-8-jdk -y
+
+Wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add - 
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/>/etc/apt/sources.list.d/jenkins.list'
+
+sudo add-apt-repository universe 
+
+sudo gpg --keyserver http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key --recv-keys https://pkg.jenkins.io/debian/jenkins.io.key
+
+apt-get update
+
+sudo apt-get install jenkins -y
+
+systemctl status jenkins
+
+
+
+**Give sudo permission to jenkins user**
+
+vi /etc/sudoers 
+
+# and add below entry
+
+jenkins ALL-(ALL) NOPASSWD: ALL
+
+
+
+**Docker-installation on jenkins**
+
+apt update
+apt install docker.io -y
+docker --version
+sudo usermod -aG docker jenkins
+
+
+
+Jenkins - Pipeline Configuration 
+Creating CI-CD pipeline in Jenkins using code from GitHub
+Creating WAR file using Maven Using Docker file for creating custom Docker Image for above WAR file
+Push Docker Image to Docker Hub
+Pull Docker image from Docker Hub
+Deploy Docker image to Google Kubernetes Engine GKE using Kubernetes Deployment YAML files
+
+
+
+
+Jenkins Plugins - Installation
+
+• Maven invoker
+• Maven Integration
+• Docker Pipeline
+. Google Kubernetes Engine
+
+
