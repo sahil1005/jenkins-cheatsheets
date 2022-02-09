@@ -72,9 +72,10 @@ Deploy Docker image to Google Kubernetes Engine GKE using Kubernetes Deployment 
 
 Jenkins Plugins - Installation
 
-• Maven invoker
-• Maven Integration
-• Docker Pipeline
-. Google Kubernetes Engine
+Docker Pipeline
+Google Kubernetes Engine
+Google Container Registry
+Google OAuth Credentials
+CloudBees Docker Build and Publish
 
 
