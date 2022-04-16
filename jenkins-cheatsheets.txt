@@ -60,6 +60,18 @@ systemctl restart jenkins
 systemctl status jenkins
 
 
+Install and Setup eksctl
+curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin 
+eksctl version
+
+
+Create eks cluster using eksctl
+eksctl create cluster --name nodejs-test-cluster --version 1.17 --region ap-south-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+
+
+
+
 Jenkins - Pipeline Configuration 
 Creating CI-CD pipeline in Jenkins using code from GitHub
 Creating WAR file using Maven Using Docker file for creating custom Docker Image for above WAR file
