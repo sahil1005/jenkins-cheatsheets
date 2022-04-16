@@ -63,7 +63,7 @@ systemctl status jenkins
  Install and Setup AWS CLI
  sudo apt install awscli 
  aws --version 
- aws config
+ aws configure
 
 
 Install and Setup eksctl
