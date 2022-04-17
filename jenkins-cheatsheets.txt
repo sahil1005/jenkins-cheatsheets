@@ -73,7 +73,7 @@ eksctl version
 
 
 Create eks cluster using eksctl
-eksctl create cluster --name nodejs-test-cluster --version 1.17 --region ap-south-1 --nodegroup-name worker-nodes --node-type t2.micro --nodes 2
+eksctl create cluster --name nodejs-test-cluster --version 1.17 --region ap-south-1 --nodegroup-name worker-nodes --node-type m5.large --nodes 2
 
 
 
